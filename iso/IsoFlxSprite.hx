@@ -38,6 +38,7 @@ class IsoFlxSprite extends FlxSprite implements IIso{
 	}
 	
 	public function calcBounds():Void {
+		// gets true iso bounds if you want things visually consistent
 		ibounds.x = Iso.getIsoXY(frameWidth - offset.x, frameHeight - offset.y).x;
 		ibounds.y = Iso.getIsoXY( -offset.x, frameHeight - offset.y).y;
 		ibounds.z = -offset.y;
